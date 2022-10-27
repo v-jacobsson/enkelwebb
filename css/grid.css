@@ -1,0 +1,147 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(40px, auto);
+  grid-gap: 3px;
+  grid-auto-flow: dense;
+}
+
+.header {
+  grid-column: 1 / -5;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  grid-column: 1 / 3;
+}
+
+.placeholder {
+  grid-column: 3 / -1;
+}
+
+/*FIRST SIDE TEXT*/
+
+.one {
+    grid-column: 1 / 6;
+}
+
+.two {
+  grid-column: 9 / -1;
+}
+
+/*FIRST SIDE PICTURES*/
+
+.mid {
+  grid-column: 6 / 9;
+  object-fit: cover;
+}
+
+/*both first and sec side*/
+.footer {
+  grid-column: 1 / -1;
+}
+
+/*2a sidan
+#c[nr] = texten
+.C[nr] = picture*/
+
+/*SEC SIDE TEXT*/
+  /*Charlie & Aled*/
+#c1, #c8 {
+  grid-column: 1 / 8;
+}
+  /*Nick & Darcy*/
+#c2, #c7 {
+  grid-column: 7 / -1;
+}
+  /*Tao*/
+#c3 {
+  grid-column: 1 / 6;
+}
+  /*Tori*/
+#c4 {
+  grid-column: 5 / 9;
+}
+  /*Elle & Tara */
+#c5, #c6 {
+  grid-column: 1 / 7;
+}
+
+/*SEC SIDE PICTURES*/
+.bild {
+  display: flex;
+  grid-gap: 3px;
+  object-fit: cover;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+  /*Tao*/
+.C3 {
+  grid-column: span 3;
+}
+  /*Tara + Darcy*/
+.C67 {
+  grid-column: span 4;
+}
+  /*tara, darcy, aled, elle, tori, nick, charlie */
+#C6, #C7, .C8, .C5, .C42, .C41, .C2, .C1 {
+  grid-column: span 2;
+}
+
+/*first side*/
+@media screen and (max-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(60px, auto)
+  }
+
+  h1, div, .header, .one, .mid, .two, .bild, .ca {
+    grid-column: 1 / -1;
+  }
+
+  .nav, .sec {
+    grid-column: span 1;
+  }
+}
+/*sec side*/
+@media screen and (max-width: 450px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+  }
+
+  .header {
+    grid-column: 1 / -1;
+  }
+
+  .sec, .nav {
+    grid-column: span 2;
+  }
+
+  .dropdown {
+    grid-column: span 2;
+  }
+
+  #c1, #c2, #c3, #c4, #c5, #c6, #c7, #c8 {
+    grid-column: 1 / -1;
+  }
+
+  .C1, .C2, .C3, .C41, .C42, .C5, .C67, .C8, .ca {
+    grid-column: 1 / -1;
+  }
+
+  #odd, .placeholder {
+    display: none;
+  }
+}

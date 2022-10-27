@@ -1,0 +1,108 @@
+/*
+  green - rgb(107,220,160)
+  salmon - rgb(244,165,165)
+  yellow - rgb(241,238,146)
+  puprle - rgb(220,195,220)
+  blue - rgb(201,218,226) background
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(201,218,226);
+}
+
+h1 {
+  font-size: 60px;
+  padding: 20px;
+  font-family: 'Slackey', cursive;
+  font-variant: small-caps;
+  background-color: rgb(244,165,165);
+  color: rgb(201,218,226);
+  text-shadow: 2px 2px #ff0000;
+}
+
+p {
+  color: rgb(244,165,165);
+  padding: 10px;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: rgb(241,238,146);
+  text-shadow: 1px 1px rgb(149, 143, 4);
+}
+
+h4 {
+  color: rgb(220,195,220);
+  /*outline*/
+  text-shadow: -1px 1px 0 rgb(128, 98, 127),
+                1px 1px 0 rgb(128, 98, 127),
+                1px -1px 0 rgb(128, 98, 127),
+               -1px -1px 0 rgb(128, 98, 127);
+}
+
+.sec {
+  color: rgb(107,220,160);
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  font-variant: small-caps;
+  text-shadow: 1px 1px rgb(35, 91, 61);
+  letter-spacing: 2px;
+}
+
+.nav {
+  background-color: rgb(244,165,165);
+  color: rgb(201,218,226);
+  text-shadow: 1px 1px #ff0000;
+  font-weight: bold;
+}
+
+.nav:hover {
+  background-color: lightblue;
+}
+
+h2, h4 {
+  text-align: center;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+/*dropdown shit*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  /*make it stick to the top when scrolling*/
+  position: sticky;
+  top: 0;
+  background-color: rgb(201,218,226);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+  overflow: auto;
+  background-color: rgb(201,218,226);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
