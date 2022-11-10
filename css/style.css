@@ -35,6 +35,10 @@ p {
   margin: 5px;
 }
 
+.two a {
+  color: white;
+}
+
 a {
   text-decoration: none;
 }
